@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 
 const output = path.resolve(process.argv[2] || '_site');
 const basePath = (process.env.PAGES_BASE_PATH || '').replace(/\/$/, '');
-const files = ['404.html'];
+const files = ['404.html', 'invite/index.html'];
 for (const section of ['tos', 'security', 'privacy']) {
   const directory = path.join(output, section);
   assert(fs.existsSync(path.join(directory, 'index.html')), `Missing ${section} page`);
@@ -23,7 +23,7 @@ for (const file of files) {
   for (const id of ['wrapper', 'header', 'page-content', 'bg']) {
     assert(html.includes(`id="${id}"`), `${file}: missing layout element ${id}`);
   }
-  for (const stylesheet of ['main', 'motion', 'cursors']) {
+  for (const stylesheet of ['main', 'motion', 'theme', 'cursors']) {
     const asset = `/assets/css/${stylesheet}.css`;
     assert(html.includes(`href="${basePath}${asset}"`), `${file}: missing or incorrect ${stylesheet} stylesheet link`);
     assert(fs.existsSync(path.join(output, asset.slice(1))), `Missing built asset: ${asset}`);

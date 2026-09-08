@@ -224,25 +224,6 @@
         background-color: rgba(231, 161, 217, 0.2);
       }
 
-      .intro-page-content a:not(.icon):not(.close) {
-        border-bottom: 0;
-        color: rgba(255, 236, 246, 0.98);
-        text-shadow:
-          0 0 0.22rem rgba(255, 214, 235, 0.82),
-          0 0 0.48rem rgba(238, 162, 214, 0.56),
-          0 0 0.9rem rgba(238, 162, 214, 0.18);
-        transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
-      }
-
-      .intro-page-content a:not(.icon):not(.close):hover,
-      .intro-page-content a:not(.icon):not(.close):focus-visible {
-        color: #ffffff;
-        text-shadow:
-          0 0 0.28rem rgba(255, 229, 240, 0.98),
-          0 0 0.7rem rgba(255, 199, 226, 0.82),
-          0 0 1.2rem rgba(238, 162, 214, 0.44);
-      }
-
       .share-article.is-copied {
         opacity: 0.6;
       }
@@ -488,6 +469,7 @@
       }
     </style>
     <link rel="stylesheet" href="{{ '/assets/css/motion.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/cursors.css' | relative_url }}" />
   </head>
   <body>
@@ -545,7 +527,7 @@
         {% include nav.html %}
       </header>
       <div id="main">
-        <article id="page-content" class="active{% if page.permalink == '/intro/' %} intro-page-content{% endif %}">
+        <article id="page-content" class="active">
           <a class="close" href="{{ page.close_url | default: '/' | relative_url }}">Close</a>
           <header class="hero">
             <h1>{{ page.title | escape }}</h1>

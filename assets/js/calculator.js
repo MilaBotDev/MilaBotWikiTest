@@ -410,7 +410,7 @@
     const close = () => {
       if (windowNode.hidden || state.isClosing) return;
       musicAudio?.pause();
-      const windowEffects = window.__milancholyWindowEffects;
+      const windowEffects = window.__MilaBotWikiWindowEffects;
       if (windowEffects?.close) {
         state.isClosing = true;
         windowEffects.close(windowNode, () => {
@@ -430,7 +430,7 @@
 
     const open = () => {
       window.clearTimeout(state.closeTimer);
-      window.__milancholyWindowEffects?.cancelClose?.(windowNode);
+      window.__MilaBotWikiWindowEffects?.cancelClose?.(windowNode);
       state.isClosing = false;
       windowNode.classList.remove("is-closing");
       windowNode.hidden = false;
@@ -547,8 +547,8 @@
     window.addEventListener("resize", () => {
       if (!windowNode.hidden) keepInViewport();
     });
-    window.__milancholyWindows = window.__milancholyWindows || {};
-    window.__milancholyWindows.calculator = { open, close };
+    window.__MilaBotWikiWindows = window.__MilaBotWikiWindows || {};
+    window.__MilaBotWikiWindows.calculator = { open, close };
     windowNode.dataset.gameReady = "true";
     render();
   };
