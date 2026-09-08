@@ -1,14 +1,14 @@
 ---
 title: "3. Message access and visibility"
 slug: message-access-and-visibility
-order: 6
+order: 8
 ---
 
 ## 3. Message access and visibility
 
 MilaBot receives Discord interactions rather than a continuous stream of ordinary server messages. It processes selected message content for features such as quoting.
 
-**Treat a command result as visible to everyone who can access its destination unless Discord labels it as only visible to you.** A discreet or ephemeral response does not prevent the Bot and Discord from processing the interaction, or make an underlying moderation action invisible in Discord’s records.
+**Treat a command result as visible to everyone who can access its destination unless Discord labels it as only visible to you.** A discreet or ephemeral response does not prevent the Bot and Discord from processing the interaction, or make an underlying moderation action invisible in Discord's records.
 
 - **Leaderboards:** worldwide rankings can display your saved name, balance or Orbs, and position outside your own server. A user ID may appear when a name is unavailable. Economy progress is linked to your account across servers. There is currently no dedicated leaderboard opt-out control.
 - **Quotes and media:** copies may identify the original author and the person requesting them. Deleting the source message or changing an avatar does not automatically remove a previously generated copy.

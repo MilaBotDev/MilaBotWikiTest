@@ -1,7 +1,7 @@
 ---
 title: "1. Where information comes from"
 slug: where-information-comes-from
-order: 8
+order: 10
 ---
 
 ## 1. Where information comes from

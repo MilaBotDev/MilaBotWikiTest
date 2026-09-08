@@ -1,12 +1,16 @@
 ---
 title: "7. Your choices and requests"
 slug: your-choices-and-requests
-order: 2
+order: 4
 ---
 
 ## 7. Your choices and requests
 
-You can stop interacting with MilaBot, remove a personal installation, or ask a server administrator to restrict the Bot’s permissions or channel access. Administrators can remove the Bot from a server. These actions do not automatically erase saved account progress or existing Discord messages.
+Use **"/privacyanddata" (PrivacyAndData)** to open a private menu. You can delete your saved application database records after a separate confirmation. This removes your balances, saved profile, purchases, inventories, Patisserie progress, cooldowns, gambling rounds, and ticket registry entries across all servers. It does not delete Discord messages or ticket threads, support correspondence, or provider backups. Processing already in progress and later interactions may create new records; contact support about an ongoing processing restriction or any remaining information.
+
+The same menu lets you hide from **worldwide Milacoin and Expansion Orb leaderboards**, or show again. This does not hide you from server leaderboards or erase existing Discord leaderboard messages. While opted out, we retain your Discord user ID in a separate preference table solely to enforce that choice; choosing to show again removes that preference record. Data deletion preserves both this opt-out and existing privacy restrictions so your choices remain effective. These minimal preference records are separate from gameplay data. The menu remains available to users with privacy restrictions.
+
+You can stop interacting with MilaBot, remove a personal installation, or ask a server administrator to restrict the Bot's permissions or channel access. Administrators can remove the Bot from a server. These actions do not automatically erase saved account progress or existing Discord messages.
 
 To request access, correction, or deletion, contact staff through the **[MilaBot Discord support server](https://discord.gg/Gff3rasUn3)** and ask how to submit your details privately. Include your Discord user ID and, where relevant, the server ID or message link in that private conversation. Please describe what you want changed or removed. We may ask you to verify control of the account or authority over the server, without asking for your password or account token.
 

@@ -1,7 +1,7 @@
 ---
 title: "6. Reasons for processing"
 slug: reasons-for-processing
-order: 3
+order: 5
 ---
 
 ## 6. Reasons for processing

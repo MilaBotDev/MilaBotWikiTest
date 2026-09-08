@@ -1,7 +1,7 @@
 ---
 title: "5. Services and people that receive information"
 slug: services-and-people-that-receive-information
-order: 4
+order: 6
 ---
 
 ## 5. Services and people that receive information
@@ -16,6 +16,6 @@ Information is disclosed as needed to:
 - **Other Discord users and server staff**, where the feature displays information to them as described above.
 - **People handling operations, support, or valid legal requests**, when access is necessary for their task.
 
-Hosting providers may process network metadata. Normal slash commands reach the Worker through Discord; this does not mean the Bot receives your device’s IP address. Direct visits to a hosted endpoint may expose visitor network information to its hosting provider.
+Hosting providers may process network metadata. Normal slash commands reach the Worker through Discord; this does not mean the Bot receives your device's IP address. Direct visits to a hosted endpoint may expose visitor network information to its hosting provider.
 
 These services operate internationally, so processing may occur outside your country. Applicable transfer protections depend on the provider, location, and arrangement. You can ask us for information about the safeguards relevant to your data.

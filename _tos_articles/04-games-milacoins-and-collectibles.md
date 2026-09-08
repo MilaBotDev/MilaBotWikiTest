@@ -1,10 +1,10 @@
 ---
-title: "4. Games, Milacoins, and collectibles"
-slug: games-milacoins-and-collectibles
+title: "4. Games, coins, and collectibles"
+slug: games-coins-and-collectibles
 order: 8
 ---
 
-## 4. Games, Milacoins, and collectibles
+## 4. Games, coins, and collectibles
 
 Milacoins, Expansion Orbs, candies, plates, levels, experience, and other in-game items are virtual gameplay features. They have **no cash value** and are not money, deposits, investments, or a promise of payment. The current shop uses earned virtual currency and does not offer real-money purchases or cash withdrawals.
 

@@ -6,9 +6,11 @@ order: 2
 
 ## 10. Restrictions, reports, and leaving
 
+**"/privacyanddata" (PrivacyAndData)** offers private, confirmed deletion of saved application database records and an option to hide from worldwide leaderboards. Deletion preserves existing privacy restrictions and leaderboard opt-out preferences. It does not erase Discord messages, ticket threads, support correspondence, or provider backups. Later interactions may create new records. Read the [Privacy Policy]({{ '/privacy/' | relative_url }}#your-choices-and-requests) for the full scope and support options.
+
 We may restrict or suspend access where reasonably necessary to address abuse, a breach of these Terms, legal requirements, or a security risk. We may act immediately when needed to protect people or the service. You can contact us to ask for a review of a restriction.
 
-Send reports through the **[MilaBot Discord support server](https://discord.gg/Gff3rasUn3)** with relevant message links, IDs, and a brief explanation. Do not include passwords or account tokens. For security vulnerabilities or reports containing personal information, ask server staff how to submit the details privately. Please report serious Discord platform violations through Discord’s reporting tools as well.
+Send reports through the **[MilaBot Discord support server](https://discord.gg/Gff3rasUn3)** with relevant message links, IDs, and a brief explanation. Do not include passwords or account tokens. For security vulnerabilities or reports containing personal information, ask server staff how to submit the details privately. Please report serious Discord platform violations through Discord's reporting tools as well.
 
 You may stop using the Bot at any time. Remove your personal installation or ask an administrator to remove it from a server. Saved data is handled as described in the Privacy Policy; uninstalling is not an automatic deletion request.
 

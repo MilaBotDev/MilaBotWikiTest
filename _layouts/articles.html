@@ -18,7 +18,7 @@ layout: page
     {% endif %}
     {{ article.content }}
     <ul class="icons article-link"><li>
-      <a href="#{{ article.slug | escape }}" class="icon solid fa-share share-article" data-share-hash="#{{ article.slug | escape }}" aria-label="Copy link to {{ article.title | escape }}" title="Share"><span class="label">Copy share link</span></a>
+      <a href="#{{ article.slug | escape }}" class="icon solid fa-share share-article glass-icon-button" data-share-hash="#{{ article.slug | escape }}" aria-label="Copy link to {{ article.title | escape }}" title="Share"><span class="label">Copy share link</span></a>
     </li></ul>
   </section>
 {% endfor %}
