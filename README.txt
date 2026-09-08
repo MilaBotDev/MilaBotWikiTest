@@ -1,7 +1,7 @@
 WEBSITE LINK:
-https://milancholy.com/
+https://MilaBotWiki.com/
 ALT LINK:
-https://milathropist.github.io/Milancholy
+https://milathropist.github.io/MilaBotWiki
 
 ASSETS I USED:
 PixelifySans「Font」:
