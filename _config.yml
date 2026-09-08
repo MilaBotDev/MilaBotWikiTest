@@ -1,0 +1,40 @@
+title: Milancholy
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: pretty
+collections:
+  tos_articles:
+    output: true
+    permalink: /tos/:slug/
+  security_articles:
+    output: true
+    permalink: /security/:slug/
+  privacy_articles:
+    output: true
+    permalink: /privacy/:slug/
+defaults:
+  - scope:
+      path: ""
+      type: tos_articles
+    values:
+      layout: page
+      close_url: /tos/
+  - scope:
+      path: ""
+      type: security_articles
+    values:
+      layout: page
+      close_url: /security/
+  - scope:
+      path: ""
+      type: privacy_articles
+    values:
+      layout: page
+      close_url: /privacy/
+exclude:
+  - README.md
+  - README.txt
+  - CON
+  - page.html
+  - scripts

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cursor preview · MilaBot</title>
+<style>
+body { max-width:70rem; margin:auto; padding:2rem; background:#191722; color:#f9f2fc; font:1rem/1.6 system-ui,sans-serif; }
+a { color:#f3bde3; } h1 { line-height:1.2; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(12rem,1fr)); gap:.75rem; }
+.tile { padding:2rem 1rem; border:1px solid #655065; border-radius:.75rem; background:#302536; text-align:center; }
+.tile:hover { background:#46324d; }
+.controls { display:flex; gap:1rem; flex-wrap:wrap; margin:2rem 0; }
+input, button { font:inherit; padding:.5rem; }
+</style><link rel="stylesheet" href="../assets/css/cursors.css"></head><body>
+<a href="../">Return home</a><h1>Cursor preview</h1>
+<p>Hover over each tile. Add matching CUR or PNG files to assets/cursors to replace system fallbacks.</p>
+<p>The none tile intentionally hides the pointer while hovered. These tiles demonstrate appearance only.</p>
+<div class="controls"><a href="#shapes">A link</a><input aria-label="Text cursor preview" placeholder="Type here"><button type="button">Button</button><button type="button" disabled>Disabled</button></div>
+<div class="grid" id="shapes">
+<div class="tile" data-cursor="default">default</div>
+<div class="tile" data-cursor="context-menu">context-menu</div>
+<div class="tile" data-cursor="help">help</div>
+<div class="tile" data-cursor="pointer">pointer</div>
+<div class="tile" data-cursor="progress">progress</div>
+<div class="tile" data-cursor="wait">wait</div>
+<div class="tile" data-cursor="cell">cell</div>
+<div class="tile" data-cursor="crosshair">crosshair</div>
+<div class="tile" data-cursor="text">text</div>
+<div class="tile" data-cursor="vertical-text">vertical-text</div>
+<div class="tile" data-cursor="alias">alias</div>
+<div class="tile" data-cursor="copy">copy</div>
+<div class="tile" data-cursor="move">move</div>
+<div class="tile" data-cursor="no-drop">no-drop</div>
+<div class="tile" data-cursor="not-allowed">not-allowed</div>
+<div class="tile" data-cursor="grab">grab</div>
+<div class="tile" data-cursor="grabbing">grabbing</div>
+<div class="tile" data-cursor="all-scroll">all-scroll</div>
+<div class="tile" data-cursor="col-resize">col-resize</div>
+<div class="tile" data-cursor="row-resize">row-resize</div>
+<div class="tile" data-cursor="n-resize">n-resize</div>
+<div class="tile" data-cursor="e-resize">e-resize</div>
+<div class="tile" data-cursor="s-resize">s-resize</div>
+<div class="tile" data-cursor="w-resize">w-resize</div>
+<div class="tile" data-cursor="ne-resize">ne-resize</div>
+<div class="tile" data-cursor="nw-resize">nw-resize</div>
+<div class="tile" data-cursor="se-resize">se-resize</div>
+<div class="tile" data-cursor="sw-resize">sw-resize</div>
+<div class="tile" data-cursor="ew-resize">ew-resize</div>
+<div class="tile" data-cursor="ns-resize">ns-resize</div>
+<div class="tile" data-cursor="nesw-resize">nesw-resize</div>
+<div class="tile" data-cursor="nwse-resize">nwse-resize</div>
+<div class="tile" data-cursor="zoom-in">zoom-in</div>
+<div class="tile" data-cursor="zoom-out">zoom-out</div>
+<div class="tile" data-cursor="auto">auto</div>
+<div class="tile" data-cursor="none">none</div>
+</div></body></html>

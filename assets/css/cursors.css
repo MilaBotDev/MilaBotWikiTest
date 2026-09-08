@@ -1,0 +1,128 @@
+/* Native cursor preparation. CUR hotspots are embedded; PNG hotspots assume 32 x 32 art. */
+:root {
+  --cursor-default-hotspot: 0 0;
+  --cursor-default: url("../cursors/default.cur"), url("../cursors/default.png") var(--cursor-default-hotspot), default;
+  --cursor-context-menu-hotspot: 0 0;
+  --cursor-context-menu: url("../cursors/context-menu.cur"), url("../cursors/context-menu.png") var(--cursor-context-menu-hotspot), context-menu;
+  --cursor-help-hotspot: 0 0;
+  --cursor-help: url("../cursors/help.cur"), url("../cursors/help.png") var(--cursor-help-hotspot), help;
+  --cursor-pointer-hotspot: 4 1;
+  --cursor-pointer: url("../cursors/pointer.cur"), url("../cursors/pointer.png") var(--cursor-pointer-hotspot), pointer;
+  --cursor-progress-hotspot: 0 0;
+  --cursor-progress: url("../cursors/progress.cur"), url("../cursors/progress.png") var(--cursor-progress-hotspot), progress;
+  --cursor-wait-hotspot: 16 16;
+  --cursor-wait: url("../cursors/wait.cur"), url("../cursors/wait.png") var(--cursor-wait-hotspot), wait;
+  --cursor-cell-hotspot: 16 16;
+  --cursor-cell: url("../cursors/cell.cur"), url("../cursors/cell.png") var(--cursor-cell-hotspot), cell;
+  --cursor-crosshair-hotspot: 16 16;
+  --cursor-crosshair: url("../cursors/crosshair.cur"), url("../cursors/crosshair.png") var(--cursor-crosshair-hotspot), crosshair;
+  --cursor-text-hotspot: 16 16;
+  --cursor-text: url("../cursors/text.cur"), url("../cursors/text.png") var(--cursor-text-hotspot), text;
+  --cursor-vertical-text-hotspot: 16 16;
+  --cursor-vertical-text: url("../cursors/vertical-text.cur"), url("../cursors/vertical-text.png") var(--cursor-vertical-text-hotspot), vertical-text;
+  --cursor-alias-hotspot: 0 0;
+  --cursor-alias: url("../cursors/alias.cur"), url("../cursors/alias.png") var(--cursor-alias-hotspot), alias;
+  --cursor-copy-hotspot: 0 0;
+  --cursor-copy: url("../cursors/copy.cur"), url("../cursors/copy.png") var(--cursor-copy-hotspot), copy;
+  --cursor-move-hotspot: 16 16;
+  --cursor-move: url("../cursors/move.cur"), url("../cursors/move.png") var(--cursor-move-hotspot), move;
+  --cursor-no-drop-hotspot: 0 0;
+  --cursor-no-drop: url("../cursors/no-drop.cur"), url("../cursors/no-drop.png") var(--cursor-no-drop-hotspot), no-drop;
+  --cursor-not-allowed-hotspot: 16 16;
+  --cursor-not-allowed: url("../cursors/not-allowed.cur"), url("../cursors/not-allowed.png") var(--cursor-not-allowed-hotspot), not-allowed;
+  --cursor-grab-hotspot: 16 16;
+  --cursor-grab: url("../cursors/grab.cur"), url("../cursors/grab.png") var(--cursor-grab-hotspot), grab;
+  --cursor-grabbing-hotspot: 16 16;
+  --cursor-grabbing: url("../cursors/grabbing.cur"), url("../cursors/grabbing.png") var(--cursor-grabbing-hotspot), grabbing;
+  --cursor-all-scroll-hotspot: 16 16;
+  --cursor-all-scroll: url("../cursors/all-scroll.cur"), url("../cursors/all-scroll.png") var(--cursor-all-scroll-hotspot), all-scroll;
+  --cursor-col-resize-hotspot: 16 16;
+  --cursor-col-resize: url("../cursors/col-resize.cur"), url("../cursors/col-resize.png") var(--cursor-col-resize-hotspot), col-resize;
+  --cursor-row-resize-hotspot: 16 16;
+  --cursor-row-resize: url("../cursors/row-resize.cur"), url("../cursors/row-resize.png") var(--cursor-row-resize-hotspot), row-resize;
+  --cursor-n-resize-hotspot: 16 16;
+  --cursor-n-resize: url("../cursors/n-resize.cur"), url("../cursors/n-resize.png") var(--cursor-n-resize-hotspot), n-resize;
+  --cursor-e-resize-hotspot: 16 16;
+  --cursor-e-resize: url("../cursors/e-resize.cur"), url("../cursors/e-resize.png") var(--cursor-e-resize-hotspot), e-resize;
+  --cursor-s-resize-hotspot: 16 16;
+  --cursor-s-resize: url("../cursors/s-resize.cur"), url("../cursors/s-resize.png") var(--cursor-s-resize-hotspot), s-resize;
+  --cursor-w-resize-hotspot: 16 16;
+  --cursor-w-resize: url("../cursors/w-resize.cur"), url("../cursors/w-resize.png") var(--cursor-w-resize-hotspot), w-resize;
+  --cursor-ne-resize-hotspot: 16 16;
+  --cursor-ne-resize: url("../cursors/ne-resize.cur"), url("../cursors/ne-resize.png") var(--cursor-ne-resize-hotspot), ne-resize;
+  --cursor-nw-resize-hotspot: 16 16;
+  --cursor-nw-resize: url("../cursors/nw-resize.cur"), url("../cursors/nw-resize.png") var(--cursor-nw-resize-hotspot), nw-resize;
+  --cursor-se-resize-hotspot: 16 16;
+  --cursor-se-resize: url("../cursors/se-resize.cur"), url("../cursors/se-resize.png") var(--cursor-se-resize-hotspot), se-resize;
+  --cursor-sw-resize-hotspot: 16 16;
+  --cursor-sw-resize: url("../cursors/sw-resize.cur"), url("../cursors/sw-resize.png") var(--cursor-sw-resize-hotspot), sw-resize;
+  --cursor-ew-resize-hotspot: 16 16;
+  --cursor-ew-resize: url("../cursors/ew-resize.cur"), url("../cursors/ew-resize.png") var(--cursor-ew-resize-hotspot), ew-resize;
+  --cursor-ns-resize-hotspot: 16 16;
+  --cursor-ns-resize: url("../cursors/ns-resize.cur"), url("../cursors/ns-resize.png") var(--cursor-ns-resize-hotspot), ns-resize;
+  --cursor-nesw-resize-hotspot: 16 16;
+  --cursor-nesw-resize: url("../cursors/nesw-resize.cur"), url("../cursors/nesw-resize.png") var(--cursor-nesw-resize-hotspot), nesw-resize;
+  --cursor-nwse-resize-hotspot: 16 16;
+  --cursor-nwse-resize: url("../cursors/nwse-resize.cur"), url("../cursors/nwse-resize.png") var(--cursor-nwse-resize-hotspot), nwse-resize;
+  --cursor-zoom-in-hotspot: 16 16;
+  --cursor-zoom-in: url("../cursors/zoom-in.cur"), url("../cursors/zoom-in.png") var(--cursor-zoom-in-hotspot), zoom-in;
+  --cursor-zoom-out-hotspot: 16 16;
+  --cursor-zoom-out: url("../cursors/zoom-out.cur"), url("../cursors/zoom-out.png") var(--cursor-zoom-out-hotspot), zoom-out;
+  --cursor-auto: auto;
+  --cursor-none: none;
+}
+
+html, body { cursor: var(--cursor-default, default); }
+p, h1, h2, h3, h4, h5, h6, blockquote, pre, code, dt, dd,
+input:not([type]), input[type="text"], input[type="search"], input[type="email"],
+input[type="url"], input[type="tel"], input[type="password"], input[type="number"],
+textarea, [contenteditable=""], [contenteditable="true"], [contenteditable="plaintext-only"] {
+  cursor: var(--cursor-text, text);
+}
+a[href], button, summary, select, label[for], [role="button"], .collapsible, .share-article,
+input[type="button"], input[type="submit"], input[type="reset"], input[type="image"],
+input[type="checkbox"], input[type="radio"], input[type="range"], input[type="color"], input[type="file"] {
+  cursor: var(--cursor-pointer, pointer);
+}
+button:disabled, input:disabled, select:disabled, textarea:disabled, [aria-disabled="true"] {
+  cursor: var(--cursor-not-allowed, not-allowed);
+}
+[aria-busy="true"] { cursor: var(--cursor-progress, progress); }
+
+/* Explicit overrides for future widgets; these set appearance, not behavior. */
+[data-cursor="default"] { cursor: var(--cursor-default, default) !important; }
+[data-cursor="context-menu"] { cursor: var(--cursor-context-menu, context-menu) !important; }
+[data-cursor="help"] { cursor: var(--cursor-help, help) !important; }
+[data-cursor="pointer"] { cursor: var(--cursor-pointer, pointer) !important; }
+[data-cursor="progress"] { cursor: var(--cursor-progress, progress) !important; }
+[data-cursor="wait"] { cursor: var(--cursor-wait, wait) !important; }
+[data-cursor="cell"] { cursor: var(--cursor-cell, cell) !important; }
+[data-cursor="crosshair"] { cursor: var(--cursor-crosshair, crosshair) !important; }
+[data-cursor="text"] { cursor: var(--cursor-text, text) !important; }
+[data-cursor="vertical-text"] { cursor: var(--cursor-vertical-text, vertical-text) !important; }
+[data-cursor="alias"] { cursor: var(--cursor-alias, alias) !important; }
+[data-cursor="copy"] { cursor: var(--cursor-copy, copy) !important; }
+[data-cursor="move"] { cursor: var(--cursor-move, move) !important; }
+[data-cursor="no-drop"] { cursor: var(--cursor-no-drop, no-drop) !important; }
+[data-cursor="not-allowed"] { cursor: var(--cursor-not-allowed, not-allowed) !important; }
+[data-cursor="grab"] { cursor: var(--cursor-grab, grab) !important; }
+[data-cursor="grabbing"] { cursor: var(--cursor-grabbing, grabbing) !important; }
+[data-cursor="all-scroll"] { cursor: var(--cursor-all-scroll, all-scroll) !important; }
+[data-cursor="col-resize"] { cursor: var(--cursor-col-resize, col-resize) !important; }
+[data-cursor="row-resize"] { cursor: var(--cursor-row-resize, row-resize) !important; }
+[data-cursor="n-resize"] { cursor: var(--cursor-n-resize, n-resize) !important; }
+[data-cursor="e-resize"] { cursor: var(--cursor-e-resize, e-resize) !important; }
+[data-cursor="s-resize"] { cursor: var(--cursor-s-resize, s-resize) !important; }
+[data-cursor="w-resize"] { cursor: var(--cursor-w-resize, w-resize) !important; }
+[data-cursor="ne-resize"] { cursor: var(--cursor-ne-resize, ne-resize) !important; }
+[data-cursor="nw-resize"] { cursor: var(--cursor-nw-resize, nw-resize) !important; }
+[data-cursor="se-resize"] { cursor: var(--cursor-se-resize, se-resize) !important; }
+[data-cursor="sw-resize"] { cursor: var(--cursor-sw-resize, sw-resize) !important; }
+[data-cursor="ew-resize"] { cursor: var(--cursor-ew-resize, ew-resize) !important; }
+[data-cursor="ns-resize"] { cursor: var(--cursor-ns-resize, ns-resize) !important; }
+[data-cursor="nesw-resize"] { cursor: var(--cursor-nesw-resize, nesw-resize) !important; }
+[data-cursor="nwse-resize"] { cursor: var(--cursor-nwse-resize, nwse-resize) !important; }
+[data-cursor="zoom-in"] { cursor: var(--cursor-zoom-in, zoom-in) !important; }
+[data-cursor="zoom-out"] { cursor: var(--cursor-zoom-out, zoom-out) !important; }
+[data-cursor="auto"] { cursor: var(--cursor-auto, auto) !important; }
+[data-cursor="none"] { cursor: var(--cursor-none, none) !important; }

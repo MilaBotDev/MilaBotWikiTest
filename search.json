@@ -1,0 +1,18 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{% assign is_first = true %}
+{% assign sections = 'tos,security,privacy' | split: ',' %}
+{% for section in sections %}
+  {% assign collection_name = section | append: '_articles' %}
+  {% assign posts = site[collection_name] | sort: 'order' | reverse %}
+  {% assign section_page = site.pages | where: 'article_collection', collection_name | first %}
+  {% for post in posts %}
+    {% capture post_url %}{{ section_page.url | relative_url }}#{{ post.slug }}{% endcapture %}
+    {% unless is_first %},{% endunless %}{% assign is_first = false %}
+    {"title": {{ post.title | jsonify }}, "url": {{ post_url | jsonify }}, "type": {{ section_page.title | jsonify }}, "group": "article", "order": {{ post.order | default: 0 | plus: 0 | jsonify }}, "content": {{ post.content | markdownify | strip_html | strip_newlines | jsonify }}}
+  {% endfor %}
+{% endfor %}
+]

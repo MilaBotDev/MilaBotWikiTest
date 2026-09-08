@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="icon" type="image/png" href="images/Favicon.png">
+		<style>
+		.collapsible {
+		  border-radius: 25px;
+		  background-color: rgba(158, 157, 157, 0.027);
+		  backdrop-filter: blur(8px);
+		  -webkit-backdrop-filter: blur(8px);
+		  border-top: 1px solid rgba(158, 157, 157, 0.4);
+		  border-left: 1px solid rgba(158, 157, 157, 0.3);
+		  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.085);
+		  color: white;
+
+		  padding: 1px 22px;
+		  width: 100%;
+		  text-align: left;
+		  outline: none;
+		  font-size: 15px;
+		}
+
+		.active, .collapsible:hover {
+		  border-radius: 25px;
+		  background-color: rgba(76, 75, 75, 0.027);
+		  backdrop-filter: blur(8px);
+		  -webkit-backdrop-filter: blur(8px);
+		  border-top: 1px solid rgba(76, 75, 75, 0.4);
+		  border-left: 1px solid rgba(176, 75, 75, 0.3);
+		  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.085);
+		}
+		
+		.collapsible:after {
+		  content: '\002B';
+		  color: white;
+		  font-weight: bold;
+		  float: right;
+		  margin-left: 2px;
+		  flex-shrink: 0;
+		  transition: transform 0.25s ease, opacity 0.2s ease;
+		}
+
+		.active:after {
+		  content: "\2212";
+		  transform: rotate(180deg); /* + → × */
+		}
+
+		.collapse-content {
+		  padding: 0 36px;
+		  max-height: 0;
+		  overflow: hidden;
+		  transition: max-height 0.2s ease-out;
+		  background-color: rgba(0, 0, 0, 0);
+		}
+		</style>
+		<title>Milancholy</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="assets/js/appearance-config.js"></script>
+		<script src="assets/js/seasonal-background.js"></script>
+		<script src="assets/js/logo-images.js" defer></script>
+		<script src="assets/js/random-logo.js" defer></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/motion.css" />
+		<link rel="stylesheet" href="assets/css/cursors.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+		<div class="site-corner-tools" aria-label="Site tools">
+			<button
+				type="button"
+				class="site-corner-tool site-search-trigger"
+				data-site-search-open
+				aria-label="Search"
+				title="Search">
+				<i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+			</button>
+		</div>
+
+		<section
+			class="xp-search-window"
+			id="siteSearchWindow"
+			role="dialog"
+			aria-modal="true"
+			aria-labelledby="siteSearchTitle"
+			aria-hidden="true"
+			hidden>
+			<header class="xp-search-titlebar" data-site-search-drag-handle>
+				<div class="xp-search-title" id="siteSearchTitle">Search</div>
+				<button
+					type="button"
+					class="xp-search-close"
+					data-site-search-close
+					aria-label="Close search"
+					title="Close">
+					X
+				</button>
+			</header>
+			<div class="xp-search-body">
+				<label class="xp-search-label" for="siteSearchInput">Find:</label>
+				<input
+					id="siteSearchInput"
+					class="xp-search-input"
+					type="search"
+					placeholder="Type to search in articles..."
+					autocomplete="off"
+					spellcheck="false" />
+				<div class="xp-search-meta" id="siteSearchMeta" aria-live="polite"></div>
+				<div class="xp-search-results" id="siteSearchResults" role="list"></div>
+			</div>
+		</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<img src="images/Logos/MilaBot.jpg" alt="MilaBot Logo">
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>MilaBot Wiki</h1>
+								<p><b>AKA: a website for MilaBot things:3</b></p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="intro/">Intro</a></li>
+								<li><a href="tos/">ToS</a></li>
+								<li><a href="security/">Security</a></li>
+								<li><a href="privacy/">Privacy</a></li>
+								<li><a href="invite/">Invite</a></li>
+								<li><a href="donate/">Donate</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Start hidden to reserve the final homepage layout before scripts load. -->
+                    <div id="main" style="display: none;"></div>
+
+                <!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; HEAVILY edited design, however the simple base was made by: <a href="https://html5up.net">HTML5 UP</a> :3</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/site-search.js"></script>
+			
+				
+	</body>
+
+</html>
