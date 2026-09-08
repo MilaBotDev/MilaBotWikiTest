@@ -36,5 +36,4 @@ exclude:
   - README.md
   - README.txt
   - CON
-  - page.html
   - scripts
