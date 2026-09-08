@@ -33,17 +33,33 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Configure site origin
+      - name: Configure site URL
         env:
           PAGES_ORIGIN: ${{ steps.pages.outputs.origin }}
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: |
-          printf '\nurl: "%s"\n' "$PAGES_ORIGIN" >> _config.yml
+          node <<'NODE'
+          const fs = require('node:fs');
+          let config = fs.readFileSync('_config.yml', 'utf8');
+          for (const [key, value] of Object.entries({
+            url: process.env.PAGES_ORIGIN,
+            baseurl: process.env.PAGES_BASE_PATH
+          })) {
+            const pattern = new RegExp('^' + key + ':.*$', 'm');
+            if (!pattern.test(config)) throw new Error('Missing Jekyll setting: ' + key);
+            config = config.replace(pattern, () => key + ': ' + JSON.stringify(value));
+          }
+          fs.writeFileSync('_config.yml', config);
+          NODE
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
-          baseurl: ${{ steps.pages.outputs.base_path }}
+      - name: Verify rendered policy pages
+        env:
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: node scripts/check-built-pages.cjs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
