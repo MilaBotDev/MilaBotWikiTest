@@ -1,0 +1,20 @@
+---
+layout: page
+---
+<div class="wiki-shell">
+  <nav class="wiki-breadcrumb" aria-label="Breadcrumb"><a href="{{ '/wiki/' | relative_url }}">Wiki</a><span aria-hidden="true"> / </span><span>{{ page.category | escape }}</span></nav>
+  <p class="wiki-summary">{{ page.summary | escape }}</p>
+  <details class="wiki-toc" hidden><summary>On this page</summary><ul></ul></details>
+  <div class="wiki-content">{{ content }}</div>
+  <aside class="wiki-related">
+    <h2>Explore more</h2>
+    <ul>
+      {% assign related = site.wiki | where: 'category', page.category | where: 'kind', 'guide' | sort: 'title' %}
+      {% for item in related %}{% unless item.url == page.url %}<li><a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></li>{% endunless %}{% endfor %}
+      <li><a href="{{ '/wiki/commands/' | relative_url }}">All commands</a></li>
+      <li><a href="{{ '/wiki/' | relative_url }}">Wiki home</a></li>
+    </ul>
+  </aside>
+  <ul class="icons article-link"><li><a href="{{ page.url | relative_url }}" class="icon solid fa-share share-article glass-icon-button" aria-label="Copy page link" title="Share"><span class="label">Copy page link</span></a></li></ul>
+  <p class="wiki-version">Reference for the bot source supplied on 13 September 2026. Live bot settings may change.</p>
+</div>

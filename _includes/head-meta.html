@@ -1,7 +1,7 @@
 {% assign meta_title = page.title | default: site.title %}
 {% capture meta_full_title %}{% if page.title and page.title != site.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
 {% assign meta_type = "website" %}
-{% if page.collection == "tos_articles" or page.collection == "security_articles" or page.collection == "privacy_articles" %}
+{% if page.collection == "tos_articles" or page.collection == "security_articles" or page.collection == "privacy_articles" or page.collection == "wiki" %}
   {% assign meta_type = "article" %}
 {% endif %}
 {% assign meta_image_path = page.og_image | default: page.image | default: page.hero_image | default: "/images/Favicon.png" %}
@@ -11,7 +11,7 @@
   {% assign meta_image_url = meta_image_path | relative_url | prepend: site.url %}
 {% endif %}
 {% assign meta_page_url = page.url | default: "/" | relative_url | prepend: site.url %}
-{% capture meta_description_raw %}{% if page.description %}{{ page.description }}{% elsif page.embed_image_only %}{% elsif page.collection == "tos_articles" or page.collection == "security_articles" or page.collection == "privacy_articles" %}{{ page.content | markdownify | strip_html | replace: "&nbsp;", " " | replace: "&#160;", " " | strip_newlines | replace: "  ", " " | replace: "  ", " " | strip }}{% endif %}{% endcapture %}
+{% capture meta_description_raw %}{% if page.description %}{{ page.description }}{% elsif page.summary %}{{ page.summary }}{% elsif page.embed_image_only %}{% elsif page.collection == "tos_articles" or page.collection == "security_articles" or page.collection == "privacy_articles" %}{{ page.content | markdownify | strip_html | replace: "&nbsp;", " " | replace: "&#160;", " " | strip_newlines | replace: "  ", " " | replace: "  ", " " | strip }}{% endif %}{% endcapture %}
 {% assign meta_description = meta_description_raw | strip | truncate: 190 %}
 <title>{{ meta_full_title | strip | escape }}</title>
 <link rel="canonical" href="{{ meta_page_url }}">

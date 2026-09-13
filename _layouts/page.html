@@ -471,6 +471,10 @@
     <link rel="stylesheet" href="{{ '/assets/css/motion.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/cursors.css' | relative_url }}" />
+    {% if page.layout == 'wiki' or page.wiki_home %}
+    <link rel="stylesheet" href="{{ '/assets/css/wiki.css' | relative_url }}" />
+    <script src="{{ '/assets/js/wiki.js' | relative_url }}" defer></script>
+    {% endif %}
   </head>
   <body>
     <div class="site-corner-tools" aria-label="Site tools">
