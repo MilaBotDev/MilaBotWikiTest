@@ -70,6 +70,9 @@ a:hover { color: var(--theme-pink); border-bottom-color: var(--theme-pink); }
 }
 #header nav ul li a:active { background: rgba(231, 161, 217, .2); }
 #header nav.use-middle::after { display: none; }
+@media (min-width: 481px) and (max-width: 736px) {
+  #header nav ul li a { min-width: 0; padding: 0 .65rem; letter-spacing: .1rem; }
+}
 @media (max-width: 480px) {
   #header nav ul li + li a {
     border-left: 0;
@@ -128,14 +131,14 @@ a:hover { color: var(--theme-pink); border-bottom-color: var(--theme-pink); }
   border-left-color: rgba(176, 75, 75, .3);
 }
 #siteSearchWindow {
-  background: rgba(67, 38, 91, .82);
+  background: linear-gradient(135deg, rgba(235, 212, 250, .1), rgba(235, 212, 250, 0) 60%), rgba(67, 38, 91, .68);
   color: #fff8fe;
   border: 1px solid rgba(255, 220, 246, .4);
   border-top-color: rgba(255, 240, 252, .65);
   border-radius: 16px;
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 20px 55px rgba(48, 18, 65, .28), inset 0 1px rgba(255,255,255,.12);
+  -webkit-backdrop-filter: blur(26px) saturate(125%);
+  backdrop-filter: blur(26px) saturate(125%);
+  box-shadow: 0 20px 55px rgba(48, 18, 65, .28), inset 0 1px rgba(255,255,255,.22), inset 0 0 0 1px rgba(255,255,255,.05);
   font-family: "Source Sans Pro", sans-serif;
   max-height: calc(100vh - 2rem);
   max-height: calc(100dvh - 2rem);
@@ -190,4 +193,3 @@ a:hover { color: var(--theme-pink); border-bottom-color: var(--theme-pink); }
 input, select, textarea { background-color: var(--theme-panel); border-color: var(--theme-border); }
 input::placeholder, textarea::placeholder { color: var(--theme-muted); opacity: 1; }
 label { color: var(--theme-text); }
-

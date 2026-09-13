@@ -2,5 +2,8 @@
 window.siteLogoImages = [
   "images/Logos/MilaBot.jpg",
   "images/Logos/MilaBotBlue.jpg",
-  "images/Logos/MilaBotPinkish.jpg"
+  "images/Logos/MilaBotGray.jpg",
+  "images/Logos/MilaBotPinkish.jpg",
+  "images/Logos/MilaBotRed.jpg",
+  "images/Logos/MilaBotViolet.png"
 ];
