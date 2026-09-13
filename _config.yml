@@ -4,6 +4,9 @@ baseurl: ""
 markdown: kramdown
 permalink: pretty
 collections:
+  wiki:
+    output: true
+    permalink: /wiki/:path/
   tos_articles:
     output: true
     permalink: /tos/:slug/
@@ -14,6 +17,12 @@ collections:
     output: true
     permalink: /privacy/:slug/
 defaults:
+  - scope:
+      path: ""
+      type: wiki
+    values:
+      layout: wiki
+      close_url: /wiki/
   - scope:
       path: ""
       type: tos_articles
@@ -33,6 +42,8 @@ defaults:
       layout: page
       close_url: /privacy/
 exclude:
+  - WIKI-MAINTENANCE.md
+  - ToMakeWiki WillBeDeleted
   - README.md
   - README.txt
   - CON

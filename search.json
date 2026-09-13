@@ -15,4 +15,9 @@ permalink: /search.json
     {"title": {{ post.title | jsonify }}, "url": {{ post_url | jsonify }}, "type": {{ section_page.title | jsonify }}, "group": "article", "order": {{ post.order | default: 0 | plus: 0 | jsonify }}, "content": {{ post.content | markdownify | strip_html | strip_newlines | jsonify }}}
   {% endfor %}
 {% endfor %}
+{% assign wiki_pages = site.wiki | sort: 'title' %}
+{% for post in wiki_pages %}
+  {% unless is_first %},{% endunless %}{% assign is_first = false %}
+  {"title": {{ post.title | jsonify }}, "url": {{ post.url | relative_url | jsonify }}, "type": "Wiki", "group": "article", "order": 0, "content": {{ post.content | markdownify | strip_html | strip_newlines | jsonify }}}
+{% endfor %}
 ]

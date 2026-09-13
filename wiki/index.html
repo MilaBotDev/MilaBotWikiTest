@@ -1,0 +1,28 @@
+---
+layout: page
+title: MilaBot Wiki
+permalink: /wiki/
+wiki_home: true
+---
+<div class="wiki-shell">
+  <p class="wiki-summary">Your guide to MilaBot’s treats, games, commands, and server tools. Start a bakery, build your team, or find the exact option you need.</p>
+  <div class="wiki-grid wiki-featured">
+    <a class="wiki-card" href="{{ '/wiki/getting-started/' | relative_url }}"><strong>Start here</strong><span>Your first commands and a path through the bot.</span></a>
+    <a class="wiki-card" href="{{ '/wiki/treats/' | relative_url }}"><strong>Treat catalogue</strong><span>34 treats with artwork, stats, bonuses, and customer uses.</span></a>
+    <a class="wiki-card" href="{{ '/wiki/commands/' | relative_url }}"><strong>Command directory</strong><span>Search all 67 public commands and message actions.</span></a>
+    <a class="wiki-card" href="{{ '/wiki/vitrine/' | relative_url }}"><strong>Build your team</strong><span>Choose treats and plates, and calculate their stats.</span></a>
+  </div>
+  {% assign categories = 'Patisserie,Economy,Games,Social,Media,Server tools,Utilities,Reference' | split: ',' %}
+  {% for category in categories %}
+    <section aria-label="{{ category }}">
+      <h2>{{ category }}</h2>
+      <div class="wiki-grid">
+        {% assign guides = site.wiki | where: 'category', category | where: 'kind', 'guide' | sort: 'title' %}
+        {% for guide in guides %}
+          <a class="wiki-card" href="{{ guide.url | relative_url }}"><strong>{{ guide.title | escape }}</strong><span>{{ guide.summary | escape }}</span></a>
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+  <p class="wiki-version">Based on the bot source supplied on 13 September 2026. For policy information, read the <a href="{{ '/tos/' | relative_url }}">Terms of Service</a>, <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>, and <a href="{{ '/security/' | relative_url }}">Security Policy</a>.</p>
+</div>
